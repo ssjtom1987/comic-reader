@@ -1,0 +1,98 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="theme-color" content="#050505">
+    <title>Comic Library</title>
+    <link rel="stylesheet" href="./css/style.css">
+  </head>
+  <body>
+    <main id="libraryScreen" class="library-screen" aria-labelledby="libraryHeading">
+      <div class="library-shell">
+        <header class="library-header">
+          <p class="eyebrow">Comic Library</p>
+          <h1 id="libraryHeading" tabindex="-1">Choose an issue</h1>
+          <p>Open a cover to start reading.</p>
+        </header>
+
+        <section id="issueGrid" class="issue-grid" aria-label="Available comic issues"></section>
+
+        <noscript>
+          <p class="noscript-message">JavaScript is required to open the comic reader.</p>
+        </noscript>
+      </div>
+    </main>
+
+    <main id="readerScreen" class="reader" aria-label="Comic reader" hidden>
+      <header class="toolbar">
+        <button id="backToLibraryButton" class="control-button back-button" type="button">
+          <span aria-hidden="true">&larr;</span>
+          <span class="back-label-full">Back to Issues</span>
+          <span class="back-label-short">Issues</span>
+        </button>
+
+        <div class="navigation-controls" aria-label="Page navigation">
+          <button
+            id="previousButton"
+            class="control-button"
+            type="button"
+            aria-label="Previous page"
+            aria-keyshortcuts="ArrowLeft"
+          >
+            <span aria-hidden="true">&larr;</span>
+            <span class="button-label">Previous</span>
+          </button>
+
+          <div class="page-status" aria-live="polite" aria-atomic="true">
+            <strong id="pageLabel">Cover</strong>
+            <span id="pagePosition">1 / 1</span>
+          </div>
+
+          <button
+            id="nextButton"
+            class="control-button"
+            type="button"
+            aria-label="Next page"
+            aria-keyshortcuts="ArrowRight"
+          >
+            <span class="button-label">Next</span>
+            <span aria-hidden="true">&rarr;</span>
+          </button>
+        </div>
+
+        <div class="zoom-controls" aria-label="Zoom controls">
+          <button id="zoomOutButton" class="icon-button" type="button" aria-label="Zoom out">&minus;</button>
+          <output id="zoomLevel" aria-live="polite">100%</output>
+          <button id="zoomInButton" class="icon-button" type="button" aria-label="Zoom in">+</button>
+          <button id="resetZoomButton" class="control-button reset-button" type="button">Reset</button>
+        </div>
+      </header>
+
+      <section
+        id="viewer"
+        class="viewer"
+        aria-label="Comic page viewer. Click or tap the left or right half to change pages."
+        tabindex="0"
+      >
+        <img
+          id="comicPage"
+          alt=""
+          decoding="async"
+          fetchpriority="high"
+          draggable="false"
+        >
+        <p id="loadError" class="load-error" role="alert" hidden>
+          This comic page could not be loaded.
+        </p>
+      </section>
+
+      <footer class="reader-hint">
+        <span>&larr; &rarr; to change pages</span>
+        <span>Wheel or pinch to zoom</span>
+      </footer>
+    </main>
+
+    <script src="./js/reader.js"></script>
+  </body>
+</html>
