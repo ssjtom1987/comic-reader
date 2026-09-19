@@ -14,11 +14,41 @@
     {
       id: "issue-02",
       number: 2,
-      title: "Coming Soon",
-      folder: null,
-      coverFilename: null,
-      pageFilenames: [],
-      status: "coming-soon"
+      title: "Binrats: Outlaws",
+      folder: "./issue-02/",
+      coverFilename: "02 - Binrats - Outlaws.png",
+      pageFilenames: [
+        "Page1.png",
+        "Page2.png",
+        "Page3.png",
+        "Page4.png",
+        "Page5.png",
+        "Page6.png",
+        "Page7.png",
+        "Page8.png",
+        "Page9.png",
+        "Page10.png",
+        "page11.png",
+        "page12.png",
+        "page13.png",
+        "page14.png",
+        "page15.png",
+        "page16.png",
+        "page17.png",
+        "page18.png",
+        "page19.png",
+        "page20.png",
+        "page21.png",
+        "Page22.png",
+        "page23.png",
+        "page24.png",
+        "page25.png",
+        "page26.png",
+        "page27.png",
+        "page28.png",
+        "page29.png"
+      ],
+      status: "available"
     }
   ];
 
